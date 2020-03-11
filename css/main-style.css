@@ -1,0 +1,151 @@
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html, body{
+    height: auto;
+}
+.top-bar-menu li>a{
+    color: black;
+    font-weight: 700;
+    padding: .5em;
+}
+/* 
+
+Modularscale:
+
+194.62em, 129.746em, 86.498em, 57.665em, 38.443em
+25.629em, 17.086em, 11.391em, 7.594em, 5.063em
+3.375em, 2.25em, 1.5em, 1em, 0.667em, 
+0.444em, 0.296em, 0.198em, 0.132em, 0.088em
+
+// if ever i get SASS going
+// $mscale1: 1em; $mscale2: 1.5em; $mscale3: 2.25em; $mscale4: 3.375em; $mscale5: 5.063em; $mscale6: 7.594em; 
+
+*/
+.bg-subtlenet{
+    background: url(../images/subtlenet2.png);
+}
+
+.profile-photo {
+    float: left;
+    margin-right: 1.5em;
+}
+
+.callout-index {
+    position: relative;
+    background-image: url(../images/earth-space-cosmos-5439.jpg);
+    background-size: cover;
+    background-position: center center;
+    /* min-height: 25.629em; */
+    padding-top: 11.391em !important;
+    border: none !important;
+    width: auto;
+}
+
+.header-index {
+    color: rgba(0, 0, 0, 0.95);
+    text-align: right;
+    font-size: 3.375em;
+    font-weight: 800;
+    /* text-shadow: .5px .5px black; */
+}
+
+.subheader-index {
+    color: white;
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-shadow: .5px .5px black;
+}
+
+@media screen and (max-width: 576px) {
+    .profile-photo {
+        all: inherit;
+        margin-bottom: 1em;
+    }
+    .callout-index {
+        padding-right: 1.5em !important;
+    }
+    .header-index {
+        font-size: 2.25em;
+    }
+    .subheader-index {
+        font-size: 1em;
+    }
+}
+
+.callout-other-pages{
+    position: relative;
+    background-image: url(../images/earth-space-cosmos-5439.jpg);
+    max-height: 7.594em;
+    background-size: cover;
+    background-position: center center;
+    /* min-height: 25.629em; */
+    /* padding-top: 11.391em !important; */
+    border: none !important;
+    width: auto;
+}
+
+.header-other-pages{
+    color: rgba(0, 0, 0, 0.95);
+    text-align: right;
+    font-size: 1.5em;
+    font-weight: 800;
+    /* text-shadow: .5px .5px black; */
+}
+.subheader-other-pages{
+    color: white;
+    text-align: right;
+    font-size: 0.667em;
+    font-weight: 400;
+    text-shadow: .5px .5px black;
+}
+.top-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.top-bar ul, .top-bar{
+    background: transparent;
+}
+
+.footer {
+    padding: 1em;
+    margin-top: 1.5em;
+    background-image: url(../images/earth-space-cosmos-5439.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+}
+.footer-left{
+    color: white;
+}
+
+.footer .footer-icons li:last-of-type {
+    margin-right: 0;
+}
+
+.footer .footer-icons .fa {
+    font-size: 1.3em;
+    color: #fefefe;
+}
+
+.footer .footer-icons .fa:hover {
+    color: #4a4a4a;
+    transition: color 0.3s ease-in;
+}
