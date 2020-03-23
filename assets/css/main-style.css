@@ -23,7 +23,13 @@ Modularscale:
 
 */
 .bg-subtlenet{
-    background: url(../images/diagmonds.png);
+    background: 
+        /* url(../images/qbkls.png),  */
+       linear-gradient(0.25turn, #fff, #a2daff, #fff);
+    background-repeat: no-repeat;
+}
+.bg-white{
+    background: #fff;
 }
 
 .profile-photo {
@@ -124,6 +130,9 @@ Modularscale:
 #index-last-row div i{
     margin-bottom: .296em;
 }
+/* .content-wrap{
+    background-color: aqua;
+} */
 
 .footer {
     padding: 1em;

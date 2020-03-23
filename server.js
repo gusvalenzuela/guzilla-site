@@ -14,8 +14,6 @@ app.use(express.json());
 app.use(express.static(`assets`))
 
 
-
-
 // Basic route that sends the user first to the AJAX Page
 app.get(`/`,(req,res)=>{
     res.sendFile(path.join(__dirname,`./assets/index.html`))
@@ -27,7 +25,7 @@ app.get("/:term", function (req, res) {
         case "portfolio":
             res.sendFile(path.join(__dirname, `./assets/portfolio.html`))
             break;
-        case "":
+        case "contact":
             res.sendFile(path.join(__dirname, `./assets/index.html`))
             break;
         default:
@@ -43,5 +41,5 @@ app.get("/:term", function (req, res) {
 
 
 app.listen(PORT, () => {
-    console.log(`App Listening on port: ` + PORT + `...`)
+    console.log(`App Listening @ localhost:` + PORT + `...`)
 })
