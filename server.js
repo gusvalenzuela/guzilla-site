@@ -1,45 +1,45 @@
 // Dependencies
 // =============================================================
-var express = require("express");
-var path = require("path");
+const express = require("express");
+const path = require("path");
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = process.env.PORT || 8080;
+const app = express();
+const PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(`assets`))
+app.use(express.static(`assets`));
 
+// Set Handlebars.
+const exphbs = require(`express-handlebars`);
+app.engine(`handlebars`, exphbs({ defaultLayout: `main` }));
+app.set(`view engine`, `handlebars`);
 
 // Basic route that sends the user first to the AJAX Page
-app.get(`/`,(req,res)=>{
-    res.sendFile(path.join(__dirname,`./assets/index.html`))
-})
-app.get("/:term", function (req, res) {
-    const page = req.params.term
-
-    switch (page) {
-        case "portfolio":
-            res.sendFile(path.join(__dirname, `./assets/portfolio.html`))
-            break;
-        case "contact":
-            res.sendFile(path.join(__dirname, `./assets/index.html`))
-            break;
-        default:
-            res.sendFile(path.join(__dirname, `./assets/foOhFo.html`))
-            break;
-    }
-    // res.sendFile(path.join(__dirname, "../index.html"));
+app.get(`/`, (req, res) => {
+  res.render(`index`);
 });
 
-// app.get("/portfolio", function (req, res) {
-//     res.sendFile(path.join(__dirname, "./portfolio.html"));
-// });
+app.get("/:term", function (req, res) {
+  const page = req.params.term;
 
+  switch (page) {
+    case "portfolio":
+      res.render(`portfolio`);
+      break;
+    case "contact":
+        res.render(`contact`);
+      break;
+    default:
+        res.render(`foOhFo`);
+      break;
+  }
+  // res.sendFile(path.join(__dirname, "../index.html"));
+});
 
 app.listen(PORT, () => {
-    console.log(`App Listening @ localhost:` + PORT + `...`)
-})
+  console.log(`App Listening @ localhost:` + PORT + `...`);
+});
