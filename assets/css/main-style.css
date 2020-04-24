@@ -6,9 +6,9 @@ html,
 body {
   min-height: 100%;
 }
-.row {
+/* .row {
   margin: auto !important;
-}
+} */
 .top-bar-menu li > a {
   color: black;
   font-weight: 700;
@@ -151,7 +151,8 @@ Modularscale:
 }
 
 #index-last-row {
-  margin: 5.063em auto;
+  margin: auto;
+  margin-bottom: 7em;
 }
 #index-last-row div p {
   text-align: left;
