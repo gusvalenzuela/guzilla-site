@@ -74,7 +74,8 @@ var projectsArray = [
         repo_url: `https://github.com/gusvalenzuela/day-planner-bootcamp`,
         img_src: `./assets/images/marten-bjork-rH8O0FHFpfw-unsplash.jpg`,
         img_alt: `day planner open and hands writing on a sticky note`,
-    }, new Project(weatherApp)
+    }, 
+    new Project(weatherApp)
 ]
 
 

@@ -174,18 +174,18 @@
 
 .card-article-hover {
   box-shadow: 0px 0px 7px #888888;
-  background:#fff;
+  background:#f7f7f7;
   margin-bottom: 1.5em;
 }
 .card-article-hover img{
-  max-height: 350px;
+  min-height: 250px;
   width: auto;
 }
 
 .card-article-hover .card-section {
   position: relative;
   width: 90%;
-  background: #fff;
+  background: #f7f7f7;
   margin: 0 auto;
   padding-top: 0.667em;
   margin-top: -3rem;
@@ -212,7 +212,7 @@
 }
 
 .card-article-hover .card-divider {
-  background: #fff;
+  background: #f7f7f7;
   text-align: center;
 }
 
