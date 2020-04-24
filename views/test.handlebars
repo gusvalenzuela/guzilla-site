@@ -1,0 +1,92 @@
+<!-- End Top Bar -->
+<div class="row column text-center">
+    <div class="translucent-form-overlay">
+        <form id="create-project-form">
+            <h3>Search for Properties</h3>
+            <div class="row columns">
+                <label>Title
+                    <input type="text" id="title" name="title" placeholder="Any">
+                </label>
+            </div>
+            <div class="row">
+                <label class="columns small-12">Version</label>
+                <div class="columns small-4">
+                    <input type="number" min="0" id="v_major" name="v_major" placeholder="Major" value="">
+                </div>
+                <div class="columns small-4">
+                    <input type="number" min="0" id="v_minor" name="v_minor" placeholder="Minor" value="">
+                </div>
+                <div class="columns small-4">
+                    <input type="number" min="0" id="v_patch" name="v_patch" placeholder="Patch" value="">
+                </div>
+            </div>
+            <div class="row columns">
+                <label>Lead
+                    <input type="text" id="lead" name="lead" placeholder="Brief statement/description of app">
+                </label>
+            </div>
+            <div class="row columns">
+                <label>Description
+                    <input type="text" id="description" name="description" placeholder="Full description of app">
+                </label>
+            </div>
+            <div class="row columns">
+                <label>URL of site/app
+                    <input type="url" id="app_url" name="app_url" placeholder="full URL Link">
+                </label>
+            </div>
+            <div class="row columns">
+                <label>URL of Repo
+                    <input type="url" id="repo_url" name="repo_url" placeholder="full URL Link">
+                </label>
+            </div>
+            <div class="row columns">
+                <label>name of image
+                    <input type="text" id="img_src" name="img_src" placeholder="Source of Image">
+                </label>
+            </div>
+            <div class="row columns">
+                <label>provide alt text for image (default: "App image")
+                    <input type="text" id="img_alt" name="img_alt" placeholder="Any">
+                </label>
+            </div>
+            <button type="submit" class="primary button expanded search-button">
+                Create
+            </button>
+        </form>
+    </div>
+
+    <script>
+        $(document).on(`ready`, () => {
+            $(`#subheader`).attr(`class`, `subheader-other-pages`).text(`TESTING`)
+            $(`#header`).attr(`class`, `header-other-pages`).hide()
+
+            $(`#create-project-form`).on(`submit`, evt => {
+                evt.preventDefault()
+
+                let version = () => {
+                    return `${$(v_major).val()}.${$(v_minor).val()}.${$(v_patch).val()}`
+                }
+
+                let newProject = {
+                    title: $(title).val().trim(),
+                    version: version(),
+                    lead: $(lead).val().trim(),
+                    description: $(description).val().trim(),
+                    url: $(app_url).val().trim(),
+                    repo_url: $(repo_url).val().trim(),
+                    img_src: $(img_src).val().trim(),
+                    img_alt: $(img_alt).val().trim(),
+                }
+
+                // console.log(newProject)
+
+                $.post(`/projects`, newProject, (response) => {
+                    window.location.href = '/test'
+                })
+            })
+
+        })
+    </script>
+
+</div>

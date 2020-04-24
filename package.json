@@ -12,6 +12,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^4.0.3",
-    "foundation-sites": "^6.6.1"
+    "foundation-sites": "^6.6.1",
+    "mongoose": "^5.9.10",
+    "morgan": "^1.10.0"
   }
 }
