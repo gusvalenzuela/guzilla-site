@@ -75,6 +75,19 @@ var projectsArray = [
         img_src: `./assets/images/marten-bjork-rH8O0FHFpfw-unsplash.jpg`,
         img_alt: `day planner open and hands writing on a sticky note`,
     }, 
+    {
+        // index: 3,
+        id: `artgar`,
+        version: "1.0",
+        title:``,
+        name: `Work Day Planner`,
+        lead: ``,
+        description: ``,
+        url: `https://gusvalenzuela.github.io/day-planner-bootcamp/`,
+        repo_url: `https://github.com/gusvalenzuela/day-planner-bootcamp`,
+        img_src: `./assets/images/marten-bjork-rH8O0FHFpfw-unsplash.jpg`,
+        img_alt: `day planner open and hands writing on a sticky note`,
+    }, 
     new Project(weatherApp)
 ]
 
