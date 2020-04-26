@@ -1,16 +1,5 @@
-
-* {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-html, body{
-    height: auto;
-}
-.top-bar-menu li>a{
-    color: black;
-    font-weight: 700;
-    padding: .5em;
-}
 /* 
+
 
 Modularscale:
 
@@ -23,129 +12,242 @@ Modularscale:
 // $mscale1: 1em; $mscale2: 1.5em; $mscale3: 2.25em; $mscale4: 3.375em; $mscale5: 5.063em; $mscale6: 7.594em; 
 
 */
-.bg-subtlenet{
-    background: url(../images/subtlenet2.png);
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+html,
+body {
+  min-height: 100%;
+}
+
+.intro-para-row {
+  line-height: 18px;
+  margin-top: 0;
+  background: #ffd5a1 !important;
+  padding: 2.25em 0.42em;
+}
+
+.custom-blockquote {
+  color: #202020 !important;
+  background: whitesmoke;
+  /* border-style: double; */
+  border: 1px inset rgb(0, 0, 77);
+  box-shadow: 4px 4px #cacaca;
+  margin: auto;
+  margin-bottom: 3em;
+}
+
+#subheader {
+  font-size: xx-large;
+}
+.bg-subtlenet {
+  background: url(../images/subtlenet2.png);
+  background: #f5f5f5;
+}
+.bg-white {
+  background: #fff;
 }
 
 .profile-photo {
-    float: left;
-    margin-right: 1.5em;
+  float: left;
+  margin-top: 0.5em;
+  margin-right: 1.5em;
+  margin-bottom: 0.5em;
+  height: 160px;
+}
+
+.content-wrap > * {
+  background: transparent;
 }
 
 .callout-index {
-    position: relative;
-    background-image: url(../images/earth-space-cosmos-5439.jpg);
-    background-size: cover;
-    background-position: center center;
-    /* min-height: 25.629em; */
-    padding-top: 11.391em !important;
-    border: none !important;
-    width: auto;
+  position: relative;
+  background: linear-gradient(#d5edea, #001f58);
+  background-image: url(../images/drop-lights.jpg);
+  background-size: cover;
+  background-position: 50% 42%;
+  height: 25.629em;
+  padding: 0 !important;
+  border: none !important;
+  margin-bottom: 0;
+}
+
+.mini-callout {
+  display: table;
+  font-family: monospace;
+  font-size: 1.5em;
+  line-height: 1em;
+  text-align: center;
+  padding: 0.667em;
+}
+.mini-callout footer {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 0.667em;
+  font-weight: 600;
+  float: right;
+  color: #777;
 }
 
 .header-index {
-    color: rgba(0, 0, 0, 0.95);
-    text-align: right;
-    font-size: 3.375em;
-    font-weight: 800;
-    /* text-shadow: .5px .5px black; */
+  color: rgba(0, 0, 0, 0.95);
+  text-align: right;
+  font-size: 3.375em;
+  font-weight: 800;
+  padding-top: 3.375em;
+  /* text-shadow: .5px .5px black; */
 }
 
 .subheader-index {
-    color: white;
-    text-align: right;
-    font-size: 1.5em;
-    font-weight: 400;
-    text-shadow: .5px .5px black;
+  color: white;
+  text-align: right;
+  font-size: 1.5em !important;
+  font-weight: 400;
+  text-shadow: 0.05em 0.05em black;
 }
 
-@media screen and (max-width: 576px) {
-    .profile-photo {
-        all: inherit;
-        margin-bottom: 1em;
-    }
-    .callout-index {
-        padding-right: 1.5em !important;
-    }
-    .header-index {
-        font-size: 2.25em;
-    }
-    .subheader-index {
-        font-size: 1em;
-    }
+.callout-other-pages {
+  position: relative;
+  background-image: url(../images/earth-space-cosmos-5439.jpg);
+  max-height: 7.594em;
+  background-size: cover;
+  background-position: center center;
+  /* min-height: 25.629em; */
+  /* padding-top: 11.391em !important; */
+  border: none !important;
+  width: auto;
 }
 
-.callout-other-pages{
-    position: relative;
-    background-image: url(../images/earth-space-cosmos-5439.jpg);
-    max-height: 7.594em;
-    background-size: cover;
-    background-position: center center;
-    /* min-height: 25.629em; */
-    /* padding-top: 11.391em !important; */
-    border: none !important;
-    width: auto;
+.header-other-pages {
+  color: rgba(0, 0, 0, 0.95);
+  text-align: right;
+  font-size: 1.5em;
+  font-weight: 800;
+  /* text-shadow: .5px .5px black; */
+}
+.subheader-other-pages {
+  padding-top: 1.5em;
+  color: white;
+  text-align: right;
+  font-size: 2.25em;
+  font-weight: 600;
+  text-shadow: 0.1em 0.1em black;
+  text-transform: uppercase;
+}
+.top-bar {
+  /* position: absolute; */
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  overflow: hidden;
+}
+.top-bar ul,
+.top-bar {
+  background: #00000077;
+}
+.top-bar-menu {
+  background: #0000003b !important;
+}
+.top-bar-menu li > a {
+  color: black;
+  font-weight: 700;
+  padding: 0.5em;
+}
+#about-me {
+  padding: 0 1em;
+  text-align: justify;
+  margin-bottom: 2.25em;
 }
 
-.header-other-pages{
-    color: rgba(0, 0, 0, 0.95);
-    text-align: right;
-    font-size: 1.5em;
-    font-weight: 800;
-    /* text-shadow: .5px .5px black; */
+#index-last-row {
+  margin: auto;
+  margin-bottom: 7em;
 }
-.subheader-other-pages{
-    color: white;
-    text-align: right;
-    font-size: 0.667em;
-    font-weight: 400;
-    text-shadow: .5px .5px black;
+#index-last-row div p {
+  text-align: justify;
 }
-.top-bar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
+#index-last-row div i {
+  margin-bottom: 0.296em;
 }
-.top-bar ul, .top-bar{
-    background: transparent;
+#quotebox {
+  margin-bottom: 3.375em;
+}
+/* .content-wrap{
+    background-color: aqua;
+} */
+
+.information-container {
+  text-align: left;
+  display: inline-block;
 }
 
 .footer {
-    padding: 1em;
-    margin-top: 1.5em;
-    background-image: url(../images/earth-space-cosmos-5439.jpg);
-    background-size: cover;
-    background-position: bottom;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: fixed;
-    bottom:0;
-    left: 0;
-    right: 0;
+  padding: 1em;
+  margin-top: 1.5em;
+  background-image: url(../images/earth-space-cosmos-5439.jpg);
+  background-size: cover;
+  background-position: bottom;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
 }
-.footer-left{
-    color: white;
+.footer-left {
+  color: white;
 }
 
 .footer .footer-icons li:last-of-type {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .footer .footer-icons .fa {
-    font-size: 1.3em;
-    color: #fefefe;
+  font-size: 1.5em;
+  color: #fefefe;
 }
 
 .footer .footer-icons .fa:hover {
-    color: #4a4a4a;
-    transition: color 0.3s ease-in;
+  color: #4a4a4a;
+  transition: color 0.3s ease-in;
 }
+
+/* 
+******************************************
+MEDIA QUERIES
+******************************************
+ */
+/* up to phablets */
+@media screen and (max-width: 576px) {
+  .header-index {
+    font-size: 2.25em;
+  }
+  .profile-photo {
+    width: 100%;
+    height: auto;
+  }
+  /* .subheader-index {
+    font-size: 1em;
+  }
+  .subheader-other-pages {
+    font-size: 1em;
+  } */
+}
+
+/* up to smaller screens */
+/* @media screen and (max-width: 375px) {
+  .profile-photo {
+    width: 100%;
+    height: auto;
+  }
+} */
