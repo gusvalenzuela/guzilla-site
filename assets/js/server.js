@@ -23,13 +23,15 @@ app.get("/:term", function (req, res) {
 
     switch (page) {
         case "portfolio":
-            res.sendFile(path.join(__dirname, `../portfolio.html`))
+            res.sendFile(path.join(__dirname, `./portfolio.html`))
             break;
+        case "images":
+            res.sendFile(path.join(__dirname,`./images/profilephoto.jpg`))
         case "":
-            res.sendFile(path.join(__dirname, `../index.html`))
+            res.sendFile(path.join(__dirname, `./index.html`))
             break;
         default:
-            res.sendFile(path.join(__dirname, `../foOhFo.html`))
+            res.sendFile(path.join(__dirname, `./foOhFo.html`))
             break;
     }
     // res.sendFile(path.join(__dirname, "../index.html"));
