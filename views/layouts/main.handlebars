@@ -11,6 +11,8 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- foundation-Sites  -->
 	<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.css">
+	{{!-- google fonts  --}}
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poiret+One&display=swap" rel="stylesheet">
 	<!-- own CSS  -->
 	<link rel="stylesheet" href="./css/main-style.css">
 	<link rel="stylesheet" href="./css/app.css">
@@ -21,15 +23,13 @@
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
 	<!-- own JS  -->
-	{{!-- <script src="./js/portfolio-projects.js"></script>
-	<script src="./js/portfolio-script-copy.js"></script> --}}
 	<script>
 		$(document).foundation();
 	</script>
 
-	<nav class="callout callout-index">
+	<div class="callout callout-index">
 		<!-- Start Top Bar -->
-		<div class="top-bar">
+		<div class="top-bar-custom">
 			<div class="top-bar-left">
 				<ul class="menu top-bar-menu">
 					<li><a href="/">Home</a></li>
@@ -43,7 +43,8 @@
 			<p class="header-index" id="header">Gus Valenzuela</p>
 			<p class="subheader-index" id="subheader">A responsive front-end developer for the modern world.</p>
 		</div>
-	</nav>
+	</div>
+
 	<main>
 		{{{body}}}
 
@@ -66,7 +67,14 @@
 			</ul>
 		</div>
 
-		
+		<script>
+			$(document).ready(() => {
+				$(`.callout-index`).css({
+					height: `40px;`,
+				})
+
+			})
+		</script>
 </body>
 
 </html>
