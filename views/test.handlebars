@@ -1,0 +1,116 @@
+<!-- End Top Bar -->
+<div class="row column text-center" style="margin-bottom: 7em;">
+    <div class="columns small-12 medium-6">
+        <form id="create-project-form" {{!-- action="/projects" 
+        method="POST" --}}>
+            <h3>Enter a new project</h3>
+            <div class="row columns">
+                <label>Title
+                    <input required type="text" id="title" name="title" value="Title">
+                </label>
+            </div>
+            <div class="row">
+                <label class="columns small-12">Version</label>
+                <div class="columns small-2">
+                    <input required type="number" min="0" id="v_major" name="v_major" value="1">
+                </div>
+                <div class="columns small-2">
+                    <input required type="number" min="0" id="v_minor" name="v_minor" value="0">
+                </div>
+                <div class="columns small-2">
+                    <input required type="number" min="0" id="v_patch" name="v_patch" value="0">
+                </div>
+                <div class="columns small-6">
+                    <label>Lead
+                        <input required type="text" id="lead" name="lead" value="Lead">
+                    </label>
+                </div>
+            </div>
+            <div class="row columns">
+
+            </div>
+            <div class="row columns">
+                <label>Description
+                    <input required type="text" id="description" name="description" value="Full description">
+                </label>
+            </div>
+            <div class="row columns">
+                <label>URL of site/app
+                    <input required type="url" id="app_url" name="app_url" value="https://urlsiez.com">
+                </label>
+            </div>
+            <div class="row columns">
+                <label>URL of Repo
+                    <input required type="url" id="repo_url" name="repo_url" value="https://urlsiezforrepo.com">
+                </label>
+            </div>
+            <div class="row columns">
+                <label>name of image
+                    <input required type="text" id="img_src" name="img_src" value="default.png">
+                </label>
+            </div>
+            <div class="row columns">
+                <label>provide alt text for image (default: "App image")
+                    <input required type="text" id="img_alt" name="img_alt" value="Alt text">
+                </label>
+            </div>
+            <div class="row columns">
+                <label>Omit from public display?
+                    <input type="checkbox" id="omit" name="omit" >
+                </label>
+            </div>
+            <button type="submit" class="primary button expanded search-button">
+                Create
+            </button>
+        </form>
+    </div>
+
+    <div class="row" id="testing">
+        <h2>Projects to show!</h2>
+
+        <ul>
+            {{projects}}
+            {{#each projects}}
+            <li>Title: {{this.title}}</li>
+            {{#unless omit}}
+            {{!-- {{> project/project-block}} --}}
+            {{/unless}}
+            {{/each}}
+
+        </ul>
+
+    </div>
+
+    <script>
+        $(document).on(`ready`, () => {
+            $(`#subheader`).attr(`class`, `subheader-other-pages`).text(`TESTING`)
+            $(`#header`).attr(`class`, `header-other-pages`).hide()
+
+            $(`#create-project-form`).on(`submit`, evt => {
+                evt.preventDefault()
+
+                let version = () => {
+                    return `${$(v_major).val()}.${$(v_minor).val()}.${$(v_patch).val()}`
+                }
+
+                let newProject = {
+                    title: $(title).val().trim(),
+                    version: version() || `1.0.0`,
+                    lead: $(lead).val().trim(),
+                    description: $(description).val().trim(),
+                    app_url: $(app_url).val().trim(),
+                    repo_url: $(repo_url).val().trim(),
+                    img_src: $(img_src).val().trim(),
+                    img_alt: $(img_alt).val().trim(),
+                    omit: $(omit)[0].checked
+                }
+
+                $.post(`/projects`, newProject, (response) => {
+                    window.location.href = '/test'
+                })
+            })
+
+        })
+    </script>
+
+</div>
