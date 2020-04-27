@@ -23,8 +23,8 @@ $color5: #e4c5afff;
 */
 
 :root {
-    --header-font: "Lobster", cursive;
-    --text-font: "Poiret One", cursive;
+    --header-font: "Special Elite", cursive;
+    --text-font: "Roboto", sans-serif;
     --color-white: #f7f7f7;
     --color1: #000501ff;
     --color2: #074f57ff;
@@ -49,7 +49,7 @@ html, body {
 .callout-index {
     position: relative;
     background: linear-gradient(#d5edea, #001f58);
-    background-image: url(../images/drop-lights.jpg);
+    background-image: url(../images/water-dropping-on-lightbulb.jpg);
     background-size: cover;
     background-position: 50% 42%;
     /* height: 25.629em; */
@@ -99,6 +99,9 @@ html, body {
 .content-wrap>* {
     background: transparent;
 }
+.content-wrap .row{
+    padding: 2.25rem 1.5rem;
+}
 
 .mini-callout {
     display: table;
@@ -123,27 +126,24 @@ html, body {
 
 .header-index {
     font-family: var(--header-font);
-    color: rgba(0, 0, 0, 0.95);
-    font-size: 3.375em;
-    font-weight: 800;
-    padding-top: 3.375em;
-    /* text-shadow: .5px .5px black; */
+    color: var(--color1);
+    font-size: 3.375rem;
+    font-weight: 900;
+    /* padding-top: 3.375em; */
+    /* text-shadow: 1px 1px var(--color-white); */
 }
 
 .subheader-index {
     font-family: var(--text-font);
     color: white;
     font-size: 1.5em !important;
-    font-weight: 400;
-    text-shadow: 0.05em 0.05em black;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px var(--color1);
 }
 
 .callout-other-pages {
     position: relative;
-    background-image: url(../images/earth-space-cosmos-5439.jpg);
-    max-height: 7.594em;
-    background-size: cover;
-    background-position: center center;
+    max-height: 7.594rem;
     /* min-height: 25.629em; */
     /* padding-top: 11.391em !important; */
     border: none !important;
@@ -151,7 +151,7 @@ html, body {
 }
 
 .header-other-pages {
-    color: rgba(0, 0, 0, 0.95);
+    color: var(--color1);
     text-align: right;
     font-size: 1.5em;
     font-weight: 800;
@@ -159,12 +159,12 @@ html, body {
 }
 
 .subheader-other-pages {
-    padding-top: 1.5em;
+    /* padding-top: 1.5em; */
     color: white;
     text-align: right;
     font-size: 2.25em;
     font-weight: 600;
-    text-shadow: 0.1em 0.1em black;
+    text-shadow: 0.1em 0.1em var(--color1);
     text-transform: uppercase;
 }
 
@@ -179,10 +179,13 @@ html, body {
 }
 
 .top-bar-menu li>a {
-    color: #070707;
+    color: var(--color1);
     text-shadow: 1px 1px #77777777;
     font-weight: 700;
     padding: 0.5em;
+}
+.text-link{
+    color: var(--color2);
 }
 
 #about-me {
@@ -194,7 +197,6 @@ html, body {
 #index-last-row {
     text-align: center;
     margin: auto;
-    margin-bottom: 7em;
     background: var(--color2);
     color: var(--color-white);
 }
@@ -211,14 +213,13 @@ html, body {
     font-size: 3.375rem;
     margin-bottom: 0.296em;
 }
+#index-last-row hr{
+    display: none;
+}
 
 #quotebox {
     margin-bottom: 3.375em;
 }
-
-/* .content-wrap{
-    background-color: aqua;
-} */
 
 .information-container {
     text-align: left;
@@ -228,7 +229,7 @@ html, body {
 .footer {
     background: var(--color1);
     padding: 1em;
-    margin-top: 1.5em;
+    margin-top: 0;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -288,6 +289,9 @@ MEDIA QUERIES
   .subheader-other-pages {
     font-size: 1em;
   } */
+  #index-last-row hr{
+      display: block;
+  }
 }
 
 /* up to smaller screens */

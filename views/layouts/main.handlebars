@@ -12,7 +12,9 @@
 	<!-- foundation-Sites  -->
 	<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.css">
 	{{!-- google fonts  --}}
-	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poiret+One&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Open+Sans&family=Poiret+One&family=Roboto&family=Special+Elite&display=swap"
+		rel="stylesheet">
 	<!-- own CSS  -->
 	<link rel="stylesheet" href="./css/main-style.css">
 	<link rel="stylesheet" href="./css/app.css">
@@ -27,25 +29,25 @@
 		$(document).foundation();
 	</script>
 
-	<div class="callout callout-index">
+	<div class="callout callout-index" id="callout">
 		<!-- Start Top Bar -->
 		<div class="top-bar-custom">
 			<div class="top-bar-left">
 				<ul class="menu top-bar-menu">
-					<li><a href="/">Home</a></li>
+					<li><a href="/#main-mane">Home</a></li>
 					<li><a href="/portfolio">Portfolio</a></li>
 					<li><a href="/contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 		<!-- End Top Bar -->
-		<div class="row column text-center" style="padding-bottom: 1.5em;">
+		<div class="row column text-center top-bar-content" style="padding-bottom: 1.5em;">
 			<p class="header-index" id="header">Gus Valenzuela</p>
 			<p class="subheader-index" id="subheader">A responsive front-end developer for the modern world.</p>
 		</div>
 	</div>
 
-	<main>
+	<main id="main-mane">
 		{{{body}}}
 
 	</main>
@@ -69,10 +71,23 @@
 
 		<script>
 			$(document).ready(() => {
-				$(`.callout-index`).css({
-					height: `40px;`,
-				})
+				const viewportW = $(window).innerWidth()
+				const viewportH = $(window).innerHeight()
+				const footerH = $(`.footer`).outerHeight()
 
+				console.log(viewportH / 3)
+				const changeCSS = () => {
+					$(`.header-index`).attr(`style`, `padding-top: ${(viewportH - footerH) / 2}px;`)
+					$(`.callout-index`).attr(`style`, `height: ${viewportH - footerH}px`)
+					$(`#index-last-row`).attr(`style`, `margin-bottom: ${footerH}px`)
+					console.log(`callout-index css changed`)
+				}
+
+				changeCSS()
+
+				$(document).resize(() => {
+					changeCSS()
+				})
 			})
 		</script>
 </body>

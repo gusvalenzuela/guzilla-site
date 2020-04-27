@@ -1,5 +1,5 @@
 <div class="content-wrap">
-    
+
 
     <div class="row" style="margin-bottom: 7em;" id="projects-container">
         {{!-- contact information card  --}}
@@ -29,6 +29,7 @@
 
 <script>
     $(document).on(`ready`, () => {
+        $(`#callout`).attr(`class`, `callout callout-other-pages`)
         $(`#subheader`).attr(`class`, `subheader-other-pages`).text(`Portfolio`)
         $(`#header`).attr(`class`, `header-other-pages`).hide()
 
