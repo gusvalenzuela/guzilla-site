@@ -3,7 +3,7 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
-
+const compression = require(`compression`)
 const db = require("./models");
 
 // const path = require("path");
@@ -19,6 +19,7 @@ app.use(express.json());
 app.use(express.static(`assets`));
 
 app.use(logger("dev"));
+app.use(compression());
 
 // Set Handlebars.
 const exphbs = require(`express-handlebars`);
