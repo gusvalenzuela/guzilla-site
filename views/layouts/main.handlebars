@@ -70,28 +70,7 @@
 				<li></li>
 			</ul>
 		</div>
-
-		<script>
-			$(document).ready(() => {
-				const viewportW = $(window).innerWidth()
-				const viewportH = $(window).innerHeight()
-				const footerH = $(`.footer`).outerHeight()
-
-				console.log(viewportH / 3)
-				const changeCSS = () => {
-					$(`.header-index`).attr(`style`, `padding-top: ${(viewportH - footerH) / 2}px;`)
-					$(`.callout-index`).attr(`style`, `height: ${viewportH}px`)
-					// $(`#index-last-row`).attr(`style`, `margin-bottom: ${footerH}px`)
-					console.log(`callout-index css changed`)
-				}
-
-				changeCSS()
-
-				$(document).resize(() => {
-					changeCSS()
-				})
-			})
-		</script>
+	<script src="./js/index.js"></script>
 </body>
 
 </html>

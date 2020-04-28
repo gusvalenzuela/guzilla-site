@@ -39,7 +39,7 @@
                 const projectsContainer = $(`#projects-container`)
                 let cardContainer = $(`<div class="columns small-12 medium-4">`)
                 let card = $(`<div class="card-article-hover card">`)
-                let bgImage = $(`<img>`).attr(`src`, item.img_src)
+                let bgImage = $(`<img>`).attr(`src`, `./images/${item.img_src}`)
                 let cardSection = $(`<div class="card-section">`)
                 let metaData = $(`<p class="meta-data article-subtext">`).text(item.libraries)
                 let title = $(`<h5 class="article-title">`).text(item.title)
