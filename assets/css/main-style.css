@@ -224,6 +224,7 @@ body {
 
 .footer {
   background: var(--color1);
+  box-shadow: 0 -5px 5px -5px rgb(0, 0, 0);
   padding: 1em 1em 2.25em;
   height: 5.063rem;
   margin-top: 0;

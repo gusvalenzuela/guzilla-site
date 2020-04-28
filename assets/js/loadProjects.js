@@ -6,18 +6,18 @@ $(document).on(`ready`, () => {
     $.get(`/projects`, (response) => {
         response.forEach(item => {
 
-            const projectsContainer = $(`#projects-container`)
+            const projectsContainer = $(`.projects-container`)
             let cardContainer = $(`<div class="columns small-12 medium-4">`)
             let card = $(`<div class="card-article-hover card">`)
-            let bgImage = $(`<img>`).attr(`src`, item.img_src)
+            let bgImage = $(`<img>`).attr(`src`, `./images/${item.img_src}`)
             let cardSection = $(`<div class="card-section">`)
             let metaData = $(`<p class="meta-data article-subtext">`).text(item.libraries)
             let title = $(`<h5 class="article-title">`).text(item.title)
-            let description = $(`<p class="article-desc">`).text(item.description)
+            let description = $(`<p class="article-desc">`).text(item.lead)
             let cardFooter = $(`<div class="card-divider">`)
-            let appUrl = $(`<a class="links">`).attr(`href`, item.app_url).text(`open`)
+            let appUrl = $(`<a class="links">`).attr(`href`, item.app_url).text(`open app`)
             let dividers = $(`<b>`).text(`•`)
-            let repoUrl = $(`<a class="links">`).attr(`href`, item.app_url).html(`<i class="fa fa-github"></i>`)
+            let repoUrl = $(`<a class="links">`).attr(`href`, item.app_url).html(`see repo`)
             let hoverDiv = $(`<div class="hover-border">`)
 
             cardSection.append(metaData, title, description)
@@ -27,7 +27,7 @@ $(document).on(`ready`, () => {
 
             cardContainer.append(card)
 
-            // APPEND TO SOMETHING HERE
+            // APPEND/PREPEND TO SOMETHING HERE
             cardContainer.prependTo(projectsContainer)
 
             //{{!-- NEW PROJECT!!!  --}}
