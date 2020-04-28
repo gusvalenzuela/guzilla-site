@@ -168,13 +168,10 @@ body {
 }
 
 .top-bar-custom {
-  /* position: absolute; */
-  /* top: 0;
-  left: 0; */
-  background: #ffffff11;
+  background: #00000011;
   width: 100%;
   overflow: hidden;
-  padding: 0.5rem;
+  padding: 1rem 2rem;
 }
 
 .top-bar-menu li > a {
@@ -227,7 +224,8 @@ body {
 
 .footer {
   background: var(--color1);
-  padding: 1em;
+  padding: 1em 1em 2.25em;
+  height: 5.063rem;
   margin-top: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -238,7 +236,7 @@ body {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
