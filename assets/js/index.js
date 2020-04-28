@@ -15,8 +15,6 @@ $(document).ready(() => {
     changeCSS()
 
     $(window).resize(() => {
-
-
         changeCSS()
     })
 })

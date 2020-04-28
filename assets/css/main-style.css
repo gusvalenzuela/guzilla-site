@@ -48,19 +48,6 @@ body {
   background: var(--color-white);
 }
 
-.callout-index {
-  position: relative;
-  background: linear-gradient(#d5edea, #001f58);
-  background-image: url(../images/water-dropping-on-lightbulb-t.jpg);
-  background-size: cover;
-  background-position: 50% 42%;
-  /* height: 25.629em; */
-  padding: 0 !important;
-  border: none !important;
-  margin: auto;
-  margin-bottom: 0;
-}
-
 .intro-para-row {
   background: var(--color3) !important;
   margin: 0 0 2.25rem !important;
@@ -119,6 +106,19 @@ body {
   color: #777;
 }
 
+.callout-index {
+  position: relative;
+  background: linear-gradient(#d5edea, #001f58);
+  background-image: url(../images/water-dropping-on-lightbulb-t.jpg);
+  background-size: cover;
+  background-position: 50% 42%;
+  /* height: 25.629em; */
+  padding: 0 !important;
+  border: none !important;
+  margin: auto;
+  margin-bottom: 0;
+}
+
 .header-index,
 .subheader-index {
   text-align: right;
@@ -145,8 +145,11 @@ body {
   max-height: 7.594rem;
   /* min-height: 25.629em; */
   /* padding-top: 11.391em !important; */
+  padding: 0 !important;
   border: none !important;
   width: auto;
+  margin: auto;
+  margin-bottom: 1rem;
 }
 
 .header-other-pages {
@@ -171,7 +174,7 @@ body {
   background: #000000aa;
   width: 100%;
   overflow: hidden;
-  padding: 1rem 2rem;
+  padding: .667rem 1.5rem;
 }
 
 .top-bar-menu li > a {
@@ -285,7 +288,8 @@ MEDIA QUERIES
     font-size: 1em;
   }
   .subheader-other-pages {
-    font-size: 1em;
+    font-size: 2em;
+    /* margin-top: .5rem; */
   }
   #index-last-row hr {
     display: block;
