@@ -130,8 +130,9 @@ body {
   color: var(--color1);
   font-size: 3.375rem;
   font-weight: 900;
-  text-shadow: 2px 2px var(--color-white);
+  text-shadow: 1px 1px var(--color-white);
   padding-top: 3rem;
+  margin-bottom: 0;
 }
 
 .subheader-index {
