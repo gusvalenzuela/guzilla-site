@@ -56,7 +56,7 @@
             </div>
             <div class="row columns">
                 <label>Omit from public display?
-                    <input type="checkbox" id="omit" name="omit" >
+                    <input type="checkbox" id="omit" name="omit">
                 </label>
             </div>
             <button type="submit" class="primary button expanded search-button">
@@ -66,6 +66,10 @@
     </div>
 
     <div class="row" id="testing">
+
+        <button type="submit" class="populate-button">
+            Populate from projects seed
+        </button>
         <h2>Projects to show!</h2>
 
         <ul>
@@ -106,6 +110,14 @@
                 }
 
                 $.post(`/projects`, newProject, (response) => {
+                    window.location.href = '/test'
+                })
+            })
+            
+            $(`.populate-button`).on(`click`, evt => {
+                evt.preventDefault()
+
+                $.post(`/test`, (response) => {
                     window.location.href = '/test'
                 })
             })
