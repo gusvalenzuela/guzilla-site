@@ -108,8 +108,9 @@ body {
 
 .callout-index {
   position: relative;
+  height: 250px;
   background: linear-gradient(#d5edea, #001f58);
-  background-image: url(../images/water-dropping-on-lightbulb-t.jpg);
+  background-image: url(../images/drop-lights-t.jpg);
   background-size: cover;
   background-position: 50% 42%;
   /* height: 25.629em; */
@@ -130,6 +131,7 @@ body {
   font-size: 3.375rem;
   font-weight: 900;
   text-shadow: 2px 2px var(--color-white);
+  padding-top: 3rem;
 }
 
 .subheader-index {
